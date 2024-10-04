@@ -37,7 +37,7 @@ public class MainImagem {
             FloodFillImagemFila.floodFill(imagemFila, xInicial, yInicial, corNovaFila);
 
             // Salvar a imagem resultante do Flood Fill com Fila
-            File arquivoImagemResultadoFila = new File("imagem_pintada_fila.png");
+            File arquivoImagemResultadoFila = new File("C:\\Users\\gabri\\IdeaProjects\\TDE1\\src\\imagem_pintada_fila.png");
             ImageIO.write(imagemFila, "png", arquivoImagemResultadoFila);
 
             System.out.println("Flood Fill (BFS) aplicado e imagem salva como 'imagem_pintada_fila.png'");
