@@ -22,15 +22,12 @@ public class FloodFillImagem {
             int atualX = pilhaX.pop();
             int atualY = pilhaY.pop();
 
-            // Verifica se a posição está dentro dos limites da imagem e se a cor é a que queremos substituir
             if (atualX < 0 || atualX >= largura || atualY < 0 || atualY >= altura || imagem.getRGB(atualX, atualY) != corAntiga) {
                 continue;
             }
-
-            // Pinta o pixel com a nova cor
+            
             imagem.setRGB(atualX, atualY, corNovaRGB);
 
-            // Adiciona as coordenadas adjacentes (cima, baixo, esquerda, direita)
             pilhaX.push(atualX + 1); pilhaY.push(atualY);     // Baixo
             pilhaX.push(atualX - 1); pilhaY.push(atualY);     // Cima
             pilhaX.push(atualX);     pilhaY.push(atualY + 1); // Direita
